@@ -1,8 +1,9 @@
 //*******************************************************************
 //  Zasor2
-//  2020.09.21 - 2021.09.05
-//  v.  1064
+//  2020.09.21 - 2023.07.05
+//  v.  1065
 //*******************************************************************
+
 import processing.serial.*;
 
 PFont myFont;
@@ -41,7 +42,7 @@ int click = 500;
 boolean flagButOn = false;
 
 String put = "data/Custom/";            //  путь для сохранения файла настроек
-PrintWriter outputCrash;               // объект output (для файла)
+PrintWriter outputCrash;                // объект output (для файла)
 
 int fillet = 5;                        //  скругление
 int[] visTablo = {10, 10, 220, 80};
@@ -89,7 +90,9 @@ void setup() {
   myFont = createFont("Arial", 12);
   textFont(myFont);
   printArray(Serial.list());
+  
   loadSetup();
+  
   size(403, 542);
   try {
     myPort = new Serial(this, Serial.list()[serialPort], portSpeed);
@@ -166,7 +169,7 @@ void writeSetup() {
   animal.setInt("numberReport", numberReport);
 
   values.setJSONObject(0, animal);
-  saveJSONArray(values, put + "option.json");
+  //saveJSONArray(values, put + "option.json");
   saveJSONArray(values, filePath + "option.json");
 }
 //*****************************************************
@@ -299,7 +302,7 @@ void saveData1() {
       animal.setString("time", dataM1[a][10]);
       values.setJSONObject(a, animal);
     }
-    saveJSONArray(values, put + "temp.json"); 
+    //saveJSONArray(values, put + "temp.json"); 
     saveJSONArray(values, filePath + "temp.json"); 
     time = "";
   }
@@ -365,7 +368,7 @@ void dataSave2next() {
     animal.setInt("1/2", int(dataM1[a][11]));
     values.setJSONObject(a, animal);
   }
-  saveJSONArray(values, put + "temp.json");
+  //saveJSONArray(values, put + "temp.json");
   saveJSONArray(values, filePath + "temp.json");
 }
 //****************************************************
@@ -403,7 +406,7 @@ void dataSave2next2() {
 
   String[] list = {rowArh};
   saveTable(table, filePath + "base.csv");
-  saveTable(table, "data/base.csv");
+  //saveTable(table, "data/base.csv");
   saveStrings("data/Arhive/Current/" + timeMonth + "/" + timeDate + "/" + 
     timeArh + ".txt", list);
 

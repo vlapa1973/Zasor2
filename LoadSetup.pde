@@ -2,7 +2,14 @@
 //  чтение файла настроек и данных
 void loadSetup() {
   JSONArray values;
-  values = loadJSONArray(put + "option.json");
+
+  values = loadJSONArray(put + "init.json");
+  for (int i = 0; i < values.size(); i++) {
+    JSONObject animal = values.getJSONObject(i);
+    filePath = animal.getString("filePath");
+  }
+
+  values = loadJSONArray(filePath + "option.json");
   for (int i = 0; i < values.size(); i++) {
     JSONObject animal = values.getJSONObject(i);
     serialPort = animal.getInt("COMport");
@@ -12,7 +19,7 @@ void loadSetup() {
     vIn = animal.getString("scalesIn");
     vOut = animal.getString("scalesOut");
     vOff = animal.getString("scalesOff");
-    filePath = animal.getString("filePath");
+    //filePath = animal.getString("filePath");
     threshold = animal.getInt("threshold");
     stab = animal.getInt("stabWeight");
     tara = animal.getInt("tara");
