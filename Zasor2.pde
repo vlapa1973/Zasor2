@@ -107,8 +107,8 @@ void setup() {
     rect(4, 3, 394, 338, fillet);
     rect(4, 348, 394, 188, fillet);
     fill(255, 0, 0);
-    textSize(30);
-    text("COM ( " + serialPort + " ) port NOT search !", 10, 158);
+    textSize(24);
+    text("COM ( " + serialPort + " ) port NOT found !", 30, 158);
 
     stop();
     //exit();
