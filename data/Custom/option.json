@@ -1,0 +1,15 @@
+[{
+  "COMport": 5,
+  "numberScales": 1,
+  "protsUmolch": 6,
+  "filePath": "data/delete/",
+  "threshold": 700,
+  "tara": 14200,
+  "stabWeight": 10,
+  "beginIn": 3,
+  "portSpeed": 9600,
+  "scalesOff": "ww000000 kg\n\r",
+  "scalesIn": "ww0",
+  "scalesOut": " kg\n",
+  "numberReport": 1
+}]
