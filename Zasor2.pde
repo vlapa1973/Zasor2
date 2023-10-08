@@ -5,7 +5,7 @@
 //*******************************************************************
 import processing.serial.*;
 
-PFont myFont;
+//PFont myFont;
 
 Serial myPort;                     //  The serial portSerial myPort;
 int lf;                            //  кол-во знаков в посылке с весов
@@ -86,8 +86,8 @@ boolean flagOpen = false;
 
 //*****************************************************
 void setup() {
-  myFont = createFont("Arial", 12);
-  textFont(myFont);
+  //myFont = createFont("Arial", 12);
+  //textFont(myFont);
   printArray(Serial.list());
   loadSetup();
   size(403, 542);
