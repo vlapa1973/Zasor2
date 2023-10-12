@@ -1,1 +1,0 @@
-08_16:50:16   COMport = 5 - does not exist
