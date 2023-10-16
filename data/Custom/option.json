@@ -1,6 +1,6 @@
 [{
   "COMport": 5,
-  "numberScales": 1,
+  "numberScales": 13,
   "protsUmolch": 6,
   "filePath": "data/delete/",
   "threshold": 700,
